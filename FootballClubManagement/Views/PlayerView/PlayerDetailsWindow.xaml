@@ -1,0 +1,87 @@
+<mah:MetroWindow x:Class="FootballClubManagement.Views.PlayerView.PlayerDetailsWindow"
+				 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Height="900"
+                 Width="1200"
+                 FontSize="40"
+                 Title="Player Details"
+                 WindowStartupLocation="CenterScreen"
+                 GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+                 ResizeMode="NoResize">
+	<Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!-- Header -->
+		<StackPanel Width="1100" Orientation="Horizontal" Margin="10">
+			<Button Content="Back" Width="150"  FontSize="30" Click="BackToMain_Click"  />
+			<Label Content="Player Details" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="44" FontWeight="Bold" Width="350" Margin="220 0 50 0"/>
+			<Button Content="Save" Width="150" FontSize="30" Click="SaveButton_Click" Background="Green"/>
+			<Button Content="Delete" Width="150" Margin="5 0 0 0" FontSize="30" Click="DeleteButton_Click" Background="Red" Foreground="White" />
+		</StackPanel>
+
+		<!-- Content -->
+		<StackPanel Grid.Row="1" Margin="0 50">
+			<!-- Player Name -->
+			<StackPanel Orientation="Horizontal">
+				<!-- Left -->
+				<StackPanel Width="400">
+					<StackPanel Orientation="Vertical" Margin="5">
+						<Label Content="Name" HorizontalContentAlignment="Center" Width="350" FontWeight="Bold" />
+						<TextBox x:Name="NameTextBox" Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+
+					<StackPanel Orientation="Vertical" Margin="5">
+						<Label Content="Age" HorizontalContentAlignment="Center" Width="350" FontWeight="Bold" />
+						<TextBox x:Name="AgeTextBox" Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+
+					<StackPanel Orientation="Vertical" Margin="5">
+						<Label Content="Height" HorizontalContentAlignment="Center" Width="350" VerticalAlignment="Center" FontWeight="Bold" />
+						<TextBox x:Name="HeightTextBox" Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<!-- Center -->
+				<StackPanel Width="400">
+					<StackPanel Orientation="Vertical" Margin="5">
+						<Label Content="Nationality" HorizontalContentAlignment="Center" Width="350" VerticalAlignment="Center" FontWeight="Bold" />
+						<TextBox x:Name="NationalityTextBox"  Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+					
+					<StackPanel Orientation="Vertical">
+						<Label Content="Position" HorizontalContentAlignment="Center" Width="350" VerticalAlignment="Center" FontWeight="Bold" />
+						<TextBox x:Name="PositionTextBox"  Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+
+					<StackPanel Orientation="Vertical" Margin="5">
+						<Label Content="Number" HorizontalContentAlignment="Center" Width="350" FontWeight="Bold" />
+						<TextBox x:Name="NumberTextBox"  Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+					
+				</StackPanel>
+				
+				<!-- Right -->
+				<StackPanel Width="400">
+					<StackPanel Orientation="Vertical">
+						<Label Content="Match Played" HorizontalContentAlignment="Center" Width="350" VerticalAlignment="Center" FontWeight="Bold" />
+						<TextBox x:Name="MatchesPlayedTextBox" Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+
+					<StackPanel Orientation="Vertical" Margin="5">
+						<Label Content="Goals" HorizontalContentAlignment="Center" Width="350" FontWeight="Bold" />
+						<TextBox x:Name="GoalsTextBox" Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+					
+					<StackPanel Orientation="Vertical" Margin="5">
+						<Label Content="Assits" HorizontalContentAlignment="Center" Width="350" FontWeight="Bold" />
+						<TextBox x:Name="AssistsTextBox" Width="350" Height="120" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</mah:MetroWindow>

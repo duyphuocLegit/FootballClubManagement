@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+	  <AssemblyTitle>Football Club Management</AssemblyTitle>
+	  <AssemblyCompany>Your Company Name</AssemblyCompany>
+	  <AssemblyProduct>FootballClubManagement</AssemblyProduct>
+	  <AssemblyVersion>1.0.0.0</AssemblyVersion>
+	  <FileVersion>1.0.0.0</FileVersion>
+	  <Description>A WPF application for managing football clubs.</Description>
+	  <SupportedOSPlatform>Windows10.0</SupportedOSPlatform>
+  </PropertyGroup>
+  
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
+  </ItemGroup>
+
+
+</Project>

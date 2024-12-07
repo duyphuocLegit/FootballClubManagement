@@ -1,0 +1,57 @@
+<mah:MetroWindow x:Class="FootballClubManagement.Views.PlayerView.AddPlayerDialog"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Height="600"
+                 Width="900"
+                 FontSize="40"
+                 WindowStartupLocation="CenterScreen"
+                 GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+                 ResizeMode="CanResizeWithGrip">
+	<Grid>
+		<StackPanel Orientation="Vertical">
+			<!-- Buttons -->
+			<StackPanel Width="800" Orientation="Horizontal" Margin="10">
+				<Button Content="Cancel" Width="150" FontSize="30" Click="CancelButton_Click" />
+				<Label Content="New Player" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="44" FontWeight="Bold" Width="350" Margin="70 0 70 0"/>
+				<Button Content="ADD" Width="150" FontSize="30" Click="SaveButton_Click" Background="Green"/>
+			</StackPanel>
+			<StackPanel Margin="30 0">
+				<!-- Name -->
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Name:" Width="300" />
+					<TextBox x:Name="NameTextBox" Width="300" FontSize="35"/>
+				</StackPanel>
+
+				<!-- Age -->
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Age:" Width="300" VerticalAlignment="Center" />
+					<TextBox x:Name="AgeTextBox" Width="300" FontSize="35" />
+				</StackPanel>
+
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Height:" Width="300" VerticalAlignment="Center" />
+					<TextBox x:Name="HeightTextBox" Width="300" FontSize="35" />
+				</StackPanel>
+
+				<!-- Nationality -->
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Nationality:" Width="300" VerticalAlignment="Center" />
+					<TextBox x:Name="NationalityTextBox" Width="300" FontSize="35" />
+				</StackPanel>
+
+				<!-- Position -->
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Position:" Width="300" VerticalAlignment="Center" />
+					<TextBox x:Name="PositionTextBox" Width="300" FontSize="35" />
+				</StackPanel>
+
+				<!-- Number -->
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Number:" Width="300" VerticalAlignment="Center" />
+					<TextBox x:Name="NumberTextBox" Width="300" FontSize="35" />
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</mah:MetroWindow>

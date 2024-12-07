@@ -1,0 +1,40 @@
+<mah:MetroWindow x:Class="FootballClubManagement.Views.PlayerView.PlayerManagementWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Height="900"
+                 Width="1200"
+                 FontSize="40"
+                 Title="Player Management"
+                 WindowStartupLocation="CenterScreen"
+                 GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+                 ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <StackPanel Width="1100" Orientation="Horizontal" Margin="10">
+            <Button Content="Back" Width="150" FontSize="30" Click="BackToMain_Click" />
+            <Label Content="Manage Players" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="44" FontWeight="Bold" Width="350" Margin="225 0 225 0"/>
+            <Button Content="Add" Width="150" FontSize="30" Click="AddButton_Click" Background="Green"/>
+        </StackPanel>
+        <!-- Player Management Content -->
+        <Grid Grid.Row="1" Margin="0 30" Width="1100">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!-- Players List -->
+            <DataGrid x:Name="PlayersDataGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
+                      SelectionMode="Single" Grid.ColumnSpan="3" MouseDoubleClick="PlayersDataGrid_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />
+                    <DataGridTextColumn Header="Position" Binding="{Binding Position}" Width="300" />
+                    <DataGridTextColumn Header="Nationality" Binding="{Binding Nationality}" Width="300" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</mah:MetroWindow>

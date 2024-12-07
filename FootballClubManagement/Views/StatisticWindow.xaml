@@ -1,0 +1,57 @@
+<mah:MetroWindow x:Class="FootballClubManagement.Views.StatisticWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Height="900"
+                 Width="1200"
+                 FontSize="35"
+                 Title="Statistics"
+                 WindowStartupLocation="CenterScreen"
+                 ResizeMode="NoResize">
+	<Grid>
+		<StackPanel>
+			<StackPanel Width="1100" Orientation="Horizontal" Margin="10">
+				<Button Content="Back" Width="150" FontSize="30" Click="BackToMain_Click" />
+				<Label Content="Statistics" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="44" FontWeight="Bold" Width="350" Margin="225 0 225 0"/>
+			</StackPanel>
+
+			<StackPanel Width="950" Margin="0 30">
+				<!-- Top Goals Player -->
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Top Goals Player:" Width="500" />
+					<TextBlock x:Name="TopGoalsPlayerTextBlock" FontWeight="Bold"/>
+				</StackPanel>
+
+				<!-- Top Assists Player -->
+				<StackPanel Orientation="Horizontal" Margin="0 10">
+					<TextBlock Text="Top Assists Player:" Width="500" />
+					<TextBlock x:Name="TopAssistsPlayerTextBlock" FontWeight="Bold"/>
+				</StackPanel>
+
+				<!-- Highest Goal Rate -->
+				<StackPanel Orientation="Horizontal" Margin="0,10">
+					<TextBlock Text="Highest Goal Rate:" Width="500" />
+					<TextBlock x:Name="PlayerWithHighestGoalRateTextBlock" FontWeight="Bold" />
+				</StackPanel>
+
+				<!-- Youngest Player -->
+				<StackPanel Orientation="Horizontal" Margin="0,10">
+					<TextBlock Text="Youngest Player:" Width="500" />
+					<TextBlock x:Name="YoungestPlayerTextBlock" FontWeight="Bold"/>
+				</StackPanel>
+
+				<!-- Most Experienced Coach -->
+				<StackPanel Orientation="Horizontal" Margin="0,10">
+					<TextBlock Text="Most Experienced Coach:" Width="500" />
+					<TextBlock x:Name="MostExperiencedCoachTextBlock" FontWeight="Bold"/>
+				</StackPanel>
+
+				<!-- Oldest Coach -->
+				<StackPanel Orientation="Horizontal" Margin="0,10">
+					<TextBlock Text="Oldest Coach:" Width="500" />
+					<TextBlock x:Name="OldestCoachTextBlock" FontWeight="Bold" />
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</mah:MetroWindow>
