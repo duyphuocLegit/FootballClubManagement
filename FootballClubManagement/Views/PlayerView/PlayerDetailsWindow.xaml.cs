@@ -84,7 +84,7 @@ namespace FootballClubManagement.Views.PlayerView
                 {
                     playerManagementWindow.LoadPlayers();
                 }
-
+                Owner?.Show();
                 Close();
             }
         }
