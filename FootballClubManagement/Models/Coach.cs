@@ -12,5 +12,10 @@
             Experience = experience;
             CoachingRole = coachingRole;
         }
+
+        public override string DisplayRole()
+        {
+            return $"Coach: {Name}, {Age} years old, has {Experience} years of experience";
+        }
     }
 }

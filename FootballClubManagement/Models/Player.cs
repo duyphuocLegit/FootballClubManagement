@@ -18,5 +18,10 @@
             Assists = 0;
             MatchesPlayed = 0;
         }
+
+        public override string DisplayRole()
+        {
+            return $"Player: {Name}, {Age} years old, position is {Position}";
+        }
     }
 }

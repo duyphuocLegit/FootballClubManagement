@@ -1,4 +1,6 @@
-﻿namespace FootballClubManagement.Models
+﻿using System;
+
+namespace FootballClubManagement.Models
 {
     public abstract class Person
     {
@@ -16,5 +18,7 @@
             Height = height;
             Nationality = nationality;
         }
+
+        public abstract string DisplayRole();
     }
 }
