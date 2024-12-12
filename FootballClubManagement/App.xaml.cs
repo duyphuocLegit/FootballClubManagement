@@ -9,16 +9,13 @@ namespace FootballClubManagement
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
             try
             {
-                // Initialize the database
                 DatabaseInitializer.Initialize();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Failed to initialize the database: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                Shutdown();
             }
         }
 

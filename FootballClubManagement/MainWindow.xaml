@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <!-- Header -->
-            <Label Content="FC Barcelona Management" 
+            <Label Content="Football Club Management" 
                    FontSize="70" 
                    FontWeight="Bold" 
                    Width="1100"

@@ -24,8 +24,10 @@ namespace FootballClubManagement.Views.PlayerView
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            var addPlayerDialog = new AddPlayerDialog();
-            addPlayerDialog.Owner = this; // Set the owner to the current window
+            var addPlayerDialog = new AddPlayerDialog
+            {
+                Owner = this // Set the owner to the current window
+            };
             addPlayerDialog.ShowDialog();
             LoadPlayers(); // Refresh the player list after adding a new player
         }
@@ -40,8 +42,10 @@ namespace FootballClubManagement.Views.PlayerView
         {
             if (PlayersDataGrid.SelectedItem is Player selectedPlayer)
             {
-                var playerDetailsWindow = new PlayerDetailsWindow(selectedPlayer);
-                playerDetailsWindow.Owner = this; // Set the owner to the current window
+                var playerDetailsWindow = new PlayerDetailsWindow(selectedPlayer)
+                {
+                    Owner = this // Set the owner to the current window
+                };
                 playerDetailsWindow.Show();
                 Hide(); // Hide the current window instead of closing it
             }
