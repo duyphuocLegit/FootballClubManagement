@@ -28,30 +28,50 @@ namespace FootballClubManagement.Views
             var playerWithHighestGoalRate = players.OrderByDescending(p => (double)p.Goals / p.MatchesPlayed).FirstOrDefault();
             var mostExperiencedCoach = coaches.OrderByDescending(c => c.Experience).FirstOrDefault();
             var oldestCoach = coaches.OrderByDescending(c => c.Age).FirstOrDefault();
+            var averagePlayerAge = players.Average(p => p.Age);
+            var totalGoals = players.Sum(p => p.Goals);
+            var totalAssists = players.Sum(p => p.Assists);
+            var averagePlayerHeight = players.Average(p => p.Height);
+            var playerWithMostMatches = players.OrderByDescending(p => p.MatchesPlayed).FirstOrDefault();
+            var totalPlayers = players.Count;
+            var totalCoachs = coaches.Count;
 
+
+            // Display results
             TopGoalsPlayerTextBlock.Text = topGoalsPlayer != null
-                ? $"{topGoalsPlayer.Name} ({topGoalsPlayer.Goals} goals)"
+                ? topGoalsPlayer.DisplayRole() + $" - {topGoalsPlayer.Goals} goals"
                 : "No data";
 
             TopAssistsPlayerTextBlock.Text = topAssistsPlayer != null
-                ? $"{topAssistsPlayer.Name} ({topAssistsPlayer.Assists} assists)"
+                ? topAssistsPlayer.DisplayRole() + $" - {topAssistsPlayer.Assists} assists"
                 : "No data";
 
             YoungestPlayerTextBlock.Text = youngestPlayer != null
-                ? $"{youngestPlayer.Name} ({youngestPlayer.Age} years old)"
+                ? youngestPlayer.DisplayRole()
                 : "No data";
 
             MostExperiencedCoachTextBlock.Text = mostExperiencedCoach != null
-                ? $"{mostExperiencedCoach.Name} ({mostExperiencedCoach.Experience} years)"
+                ? mostExperiencedCoach.DisplayRole()
                 : "No data";
 
             OldestCoachTextBlock.Text = oldestCoach != null
-                ? $"{oldestCoach.Name} ({oldestCoach.Age} years old)"
+                ? oldestCoach.DisplayRole()
                 : "No data";
 
             PlayerWithHighestGoalRateTextBlock.Text = playerWithHighestGoalRate != null
-                ? $"{playerWithHighestGoalRate.Name} ({(double)playerWithHighestGoalRate.Goals / playerWithHighestGoalRate.MatchesPlayed:F2} goals per game)"
+                ? playerWithHighestGoalRate.DisplayRole() + $" - {(double)playerWithHighestGoalRate.Goals / playerWithHighestGoalRate.MatchesPlayed:F2} goals per game"
                 : "No data";
+
+            AveragePlayerAgeTextBlock.Text = $"{averagePlayerAge:F2} years old";
+            TotalGoalsTextBlock.Text = $"{totalGoals}";
+            TotalAssistsTextBlock.Text = $"{totalAssists}";
+            AveragePlayerHeightTextBlock.Text = $"{averagePlayerHeight:F2} cm";
+            PlayerWithMostMatchesTextBlock.Text = playerWithMostMatches != null
+                ? playerWithMostMatches.DisplayRole() + $" - {playerWithMostMatches.MatchesPlayed} matches"
+                : "No data";
+            TotalNumberOfPlayersTextBlock.Text = $"{totalPlayers}";
+            TotalNumberOfCoachesTextBlock.Text = $"{totalCoachs}";
+
         }
 
         private void BackToMain_Click(object sender, RoutedEventArgs e)

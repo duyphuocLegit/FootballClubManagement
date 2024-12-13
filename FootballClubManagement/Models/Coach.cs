@@ -15,7 +15,7 @@
 
         public override string DisplayRole()
         {
-            return $"Coach: {Name}, {Age} years old, has {Experience} years of experience";
+            return $"{Name}, {Age} years old, has {Experience} years of experience";
         }
     }
 }

@@ -21,7 +21,7 @@
 
         public override string DisplayRole()
         {
-            return $"Player: {Name}, {Age} years old, position is {Position}";
+            return $"{Name}, {Age} years old, pos: {Position}";
         }
     }
 }

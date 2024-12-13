@@ -4,54 +4,85 @@
                  xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                  Height="900"
                  Width="1200"
-                 FontSize="30"
+                 FontSize="20"
                  Title="Statistics"
                  WindowStartupLocation="CenterScreen"
                  ResizeMode="NoResize">
 	<Grid>
-		<StackPanel>
-			<StackPanel Width="1100" Orientation="Horizontal" Margin="10">
-				<Button Content="Back" Width="150" FontSize="30" Click="BackToMain_Click" />
-				<Label Content="Statistics" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="44" FontWeight="Bold" Width="350" Margin="225 0 225 0"/>
-			</StackPanel>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
 
-			<StackPanel Width="950" Margin="0 40">
-				<!-- Top Goals Player -->
-				<StackPanel Orientation="Horizontal" Margin="0 15">
-					<TextBlock Text="Top Goals Player:" Width="400" />
-					<TextBlock x:Name="TopGoalsPlayerTextBlock" FontWeight="Bold"/>
-				</StackPanel>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
 
-				<!-- Top Assists Player -->
-				<StackPanel Orientation="Horizontal" Margin="0 15">
-					<TextBlock Text="Top Assists Player:" Width="400" />
-					<TextBlock x:Name="TopAssistsPlayerTextBlock" FontWeight="Bold"/>
-				</StackPanel>
+		<Button Content="Back" Width="150" FontSize="30" Click="BackToMain_Click" Margin="10"/>
+		<Label Content="Statistics" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="44" FontWeight="Bold" Grid.Column="1" Margin="10"/>
 
-				<!-- Highest Goal Rate -->
-				<StackPanel Orientation="Horizontal" Margin="0 15">
-					<TextBlock Text="Highest Goal Rate:" Width="400" />
-					<TextBlock x:Name="PlayerWithHighestGoalRateTextBlock" FontWeight="Bold" />
-				</StackPanel>
+		<Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="20">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
 
-				<!-- Youngest Player -->
-				<StackPanel Orientation="Horizontal" Margin="0 15">
-					<TextBlock Text="Youngest Player:" Width="400" />
-					<TextBlock x:Name="YoungestPlayerTextBlock" FontWeight="Bold"/>
-				</StackPanel>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="400"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
 
-				<!-- Most Experienced Coach -->
-				<StackPanel Orientation="Horizontal" Margin="0 15">
-					<TextBlock Text="Most Experienced Coach:" Width="400" />
-					<TextBlock x:Name="MostExperiencedCoachTextBlock" FontWeight="Bold"/>
-				</StackPanel>
+			<TextBlock Text="Top Goals Player:" Grid.Row="0" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="TopGoalsPlayerTextBlock" FontWeight="Bold" Grid.Row="0" Grid.Column="1" Margin="0 15"/>
 
-				<!-- Oldest Coach -->
-				<StackPanel Orientation="Horizontal" Margin="0 15">
-					<TextBlock Text="Oldest Coach:" Width="400" />
-					<TextBlock x:Name="OldestCoachTextBlock" FontWeight="Bold" />
-				</StackPanel>
-			</StackPanel>
-		</StackPanel>
+			<TextBlock Text="Top Assists Player:" Grid.Row="1" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="TopAssistsPlayerTextBlock" FontWeight="Bold" Grid.Row="1" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Highest Goal Rate:" Grid.Row="2" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="PlayerWithHighestGoalRateTextBlock" FontWeight="Bold" Grid.Row="2" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Youngest Player:" Grid.Row="3" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="YoungestPlayerTextBlock" FontWeight="Bold" Grid.Row="3" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Average Player Age:" Grid.Row="4" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="AveragePlayerAgeTextBlock" FontWeight="Bold" Grid.Row="4" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Total Goals:" Grid.Row="5" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="TotalGoalsTextBlock" FontWeight="Bold" Grid.Row="5" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Total Assists:" Grid.Row="6" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="TotalAssistsTextBlock" FontWeight="Bold" Grid.Row="6" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Average Player Height:" Grid.Row="7" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="AveragePlayerHeightTextBlock" FontWeight="Bold" Grid.Row="7" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Player With Most Matches:" Grid.Row="8" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="PlayerWithMostMatchesTextBlock" FontWeight="Bold" Grid.Row="8" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Most Experienced Coach:" Grid.Row="9" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="MostExperiencedCoachTextBlock" FontWeight="Bold" Grid.Row="9" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Oldest Coach:" Grid.Row="10" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="OldestCoachTextBlock" FontWeight="Bold" Grid.Row="10" Grid.Column="1" Margin="0 15"/>
+
+			<TextBlock Text="Total Number Of Coachs:" Grid.Row="11" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="TotalNumberOfCoachesTextBlock" FontWeight="Bold" Grid.Row="11" Grid.Column="1" Margin="0 15"/>
+			
+			<TextBlock Text="Total Number Of Players:" Grid.Row="12" Grid.Column="0" Margin="0 15"/>
+			<TextBlock x:Name="TotalNumberOfPlayersTextBlock" FontWeight="Bold" Grid.Row="12" Grid.Column="1" Margin="0 15"/>
+			
+		</Grid>
 	</Grid>
 </mah:MetroWindow>
